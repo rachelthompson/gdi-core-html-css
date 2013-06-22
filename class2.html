@@ -25,6 +25,14 @@
 		
 		<link rel="stylesheet" href="reveal/css/print/pdf.css" type="text/css" media="print">
 
+    <style type="text/css">
+      ul.inline-list li {
+        display: inline-block;
+        margin: 0.25em;
+        padding: 0.5em;
+      }
+    </style>
+
 		<!--[if lt IE 9]>
 		<script src="lib/js/html5shiv.js"></script>
 		<![endif]-->
@@ -234,27 +242,30 @@ p {
         <p style="display: inline-block; margin: 0.5em;">Color name</p>
         <p style="display: inline-block; margin: 0.5em;">Hexadecimal value</p>
         <p style="display: inline-block; margin: 0.5em;">RGB value</p>
-        <p style="font-size: 0.5em; background-color: black; padding: 0.5em;">
-          The 17 standard colors are:
-            <span style="color: aqua;">aqua</span>,
-            <span style="color: black; background-color: white;">black</span>,
-            <span style="color: blue;">blue</span>,
-            <span style="color: fuchsia;">fuchsia</span>,
-            <span style="color: gray;">gray</span>,
-            <span style="color: grey;">grey</span>,
-            <span style="color: green;">green</span>,
-            <span style="color: lime;">lime</span>,
-            <span style="color: maroon;">maroon</span>,
-            <span style="color: navy;">navy</span>,
-            <span style="color: olive;">olive</span>,
-            <span style="color: purple;">purple</span>,
-            <span style="color: red;">red</span>,
-            <span style="color: silver;">silver</span>,
-            <span style="color: teal;">teal</span>,
-            <span style="color: white;">white</span>,
-            and
-            <span style="color: yellow;">yellow</span>.
-        </p>
+        <div style="background-color: black; padding: 1em; font-size: 0.5em;">
+          <p>
+            The 17 standard colors are:
+          </p>
+          <ul class="inline-list" style="text-align: center;">
+            <li style="color: aqua;">aqua</li>
+            <li style="color: yellow;">yellow</li>
+            <li style="color: blue;">blue</li>
+            <li style="color: fuchsia;">fuchsia</li>
+            <li style="color: gray;">gray</li>
+            <li style="color: grey;">grey</li>
+            <li style="color: green;">green</li>
+            <li style="color: lime;">lime</li>
+            <li style="color: maroon;">maroon</li>
+            <li style="color: navy;">navy</li>
+            <li style="color: olive;">olive</li>
+            <li style="color: purple;">purple</li>
+            <li style="color: red;">red</li>
+            <li style="color: silver;">silver</li>
+            <li style="color: teal;">teal</li>
+            <li style="color: white;">white</li>
+            <li style="color: black; background-color: white;">black</li>
+          </ul>
+        </div>
 
         </section>
         
