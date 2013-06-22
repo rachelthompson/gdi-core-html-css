@@ -118,9 +118,9 @@ selector {
           
 <pre><code class = "html">
 selector {
-  property: value;
-  property: value;
-  property: value;
+  property-1: value-A;
+  property-2: value-B;
+  property-3: value-C;
 }
 </code></pre>
         </section>
@@ -207,7 +207,7 @@ p em {
         <h3>Property Values</h3>
         <p>Each property can have one or more comma separated values.</p>
 <pre><code class = "html">
-p{
+p {
   color: white;
   background-color: red;
   font-family: Arial, sans-serif;
@@ -219,17 +219,42 @@ p{
         <section>
           <h3>Property: Color</h3>
           <p>The color property changes the color of the text.</p>
-<pre><code class = "html">
-p {
+<pre><code class="html">p {
   color: red;
+}
+</code></pre>
+<pre><code class="html">p {
   color: #ff0000;
+}
+</code></pre>
+<pre><code class="html">p {
   color: rgb(255, 0, 0);
 }
 </code></pre>
-        <p>Color name</p>
-        <p>Hexadecimal value</p>
-        <p>RGB value</p>
-        <p><small>The 17 standard colors are: <font color="aqua" style="background:black;">aqua</font>, black, <font color="blue">blue</font>, <font color="fuchsia">fuchsia</font>, <font color="gray">gray</font>, <font color="grey">grey</font>, <font color="green">green</font>, <font color="lime">lime</font>, <font color="maroon">maroon</font>, <font color="navy">navy</font>, <font color="olive">olive</font>, <font color="purple">purple</font>, <font color="red">red</font>, <font color="silver" style="background:black;">silver</font>, <font color="teal">teal</font>, <font color="white" style="background:black;">white</font>, and <font color="yellow" style="background:black;">yellow</font>.</small></p>
+        <p style="display: inline-block; margin: 0.5em;">Color name</p>
+        <p style="display: inline-block; margin: 0.5em;">Hexadecimal value</p>
+        <p style="display: inline-block; margin: 0.5em;">RGB value</p>
+        <p style="font-size: 0.5em; background-color: black; padding: 0.5em;">
+          The 17 standard colors are:
+            <span style="color: aqua;">aqua</span>,
+            <span style="color: black; background-color: white;">black</span>,
+            <span style="color: blue;">blue</span>,
+            <span style="color: fuchsia;">fuchsia</span>,
+            <span style="color: gray;">gray</span>,
+            <span style="color: grey;">grey</span>,
+            <span style="color: green;">green</span>,
+            <span style="color: lime;">lime</span>,
+            <span style="color: maroon;">maroon</span>,
+            <span style="color: navy;">navy</span>,
+            <span style="color: olive;">olive</span>,
+            <span style="color: purple;">purple</span>,
+            <span style="color: red;">red</span>,
+            <span style="color: silver;">silver</span>,
+            <span style="color: teal;">teal</span>,
+            <span style="color: white;">white</span>,
+            and
+            <span style="color: yellow;">yellow</span>.
+        </p>
 
         </section>
         
@@ -237,10 +262,15 @@ p {
         <section>
           <h3>Property: Background-color</h3>
           <p>The background-color property changes the color of the background.</p>
-<pre><code class = "html">
-p {
+<pre><code class="html">p {
   background-color: black;
+}
+</code></pre>
+<pre><code class="html">p {
   background-color: #000000;
+}
+</code></pre>
+<pre><code class="html">p {
   background-color: rgb(0,0,0);
 }
 </code></pre>
@@ -250,10 +280,15 @@ p {
         <section>
           <h3>Property: Font-family</h3>
           <p>The font-family property deﬁnes which font is used.</p>
-<pre><code class = "html">
-p {
+<pre><code class="html">p {
   font-family: "Times New Roman";
+}
+</code></pre>
+<pre><code class="html">p {
   font-family: serif;
+}
+</code></pre>
+<pre><code class="html">p {
   font-family: "Arial", sans-serif;
 }
 </code></pre>
@@ -266,10 +301,15 @@ p {
         <section>
           <h3>Property: Font-size</h3>
           <p>The font-size property speciﬁes the size of the font.</p>
-<pre><code class = "html">
-p {
+<pre><code class="html">p {
   font-size: 12px;
+}
+</code></pre>
+<pre><code class="html">p {
   font-size: 1.5em;
+}
+</code></pre>
+<pre><code class="html">p {
   font-size: 100%;
 }
 </code></pre>
@@ -310,7 +350,7 @@ p {
         <section>
           <h3>Connecting CSS to HTML: Inline</h3>
 <pre><code class = "html">
-  &lt;p style="color:red">Some text.&lt;/p>
+  &lt;p style="color: red;">Some text.&lt;/p>
 </code></pre>
           <p>Uses the HTML attribute style.</p>
           <p>Difficult to use in large projects</p>
@@ -340,7 +380,7 @@ p {
           <h3>Connecting CSS to HTML: Linked</h3>
 <pre><code class = "html">
 &lt;head>
-  &lt;link rel="stylesheet" type="text/css" href="style.css">
+  &lt;link rel="stylesheet" type="text/css" href="style.css"/>
 &lt;/head>
 </code></pre>
           <p>Shared resource for several pages.</p>
@@ -365,14 +405,14 @@ p {
           <h3>Cascading</h3>
           <p>Styles "cascade" down until changed</p>
 <pre><code class = "html">
-p{
-  color:blue;
+p {
+  color: blue;
   font-family: 'Helvetica';
 }
-.red{
-  color:red;
+.warm {
+  color: red;
 }
-#special{
+#special {
   font-family: Arial;
 }
 </code></pre>
@@ -380,8 +420,8 @@ p{
 <pre><code class = "html">
   &lt;p>Paragraph&lt;/p>
   &lt;p class="green">Paragraph&lt;/p>
-  &lt;p class="red">Paragraph&lt;/p>
-  &lt;p class="red" id="special">Paragraph&lt;/p>
+  &lt;p class="warm">Paragraph&lt;/p>
+  &lt;p class="warm" id="special">Paragraph&lt;/p>
 </code></pre>
         </section>
       
